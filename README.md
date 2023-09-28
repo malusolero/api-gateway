@@ -1,0 +1,2 @@
+# api-gateway
+COMPONENTE C - API GATEWAY
