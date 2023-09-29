@@ -33,21 +33,21 @@ Estes valores são as rotas do serviço de login e de produtos
 Para executar a API basta executar:
 
 ```
-(env)$ flask run --host 0.0.0.0 --port 5003
+(env)$ flask run --host 0.0.0.0 --port 5002
 ```
 
 Em modo de desenvolvimento é recomendado executar utilizando o parâmetro reload, que reiniciará o servidor
 automaticamente após uma mudança no código fonte.
 
 ```
-(env)$ flask run --host 0.0.0.0 --port 5003 --reload
+(env)$ flask run --host 0.0.0.0 --port 5002 --reload
 ```
 
 ---
 
 ### Acesso no browser
 
-Abra o [http://localhost:5003/#/](http://localhost:5003/#/) no navegador para verificar o status da API em execução.
+Abra o [http://localhost:5002/#/](http://localhost:5002/#/) no navegador para verificar o status da API em execução.
 
 ---
 
@@ -59,16 +59,16 @@ Navegue até o diretório que contém o Dockerfile e o requirements.txt no termi
 Execute **como administrador** o seguinte comando para construir a imagem Docker:
 
 ```
-$ docker build -t product-service .
+$ docker build -t api-gateway .
 ```
 
 Uma vez criada a imagem, para executar o container basta executar, **como administrador**, seguinte o comando:
 
 ```
-$ docker run -p 5003:5003 login-service
+$ docker run -p 5002:5002 api-gateway
 ```
 
-Uma vez executando, para acessar a API, basta abrir o [http://localhost:5003/#/](http://localhost:5003/#/) no navegador.
+Uma vez executando, para acessar a API, basta abrir o [http://localhost:5002/#/](http://localhost:5002/#/) no navegador.
 
 ### Alguns comandos úteis do Docker
 
